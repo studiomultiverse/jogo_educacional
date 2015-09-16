@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 
 public class Letra {
 
-	private int x, y, marco;
+	private int x, y;
 	private int dx, dy;
 	private int largura, altura;
 	private Image a;
