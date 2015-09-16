@@ -1,2 +1,2 @@
 # teste jogo 
-Jogo educativo em desenvolvimento, Universitario
+bebe lindo eu amo voce 
