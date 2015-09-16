@@ -1,0 +1,36 @@
+package jogoEducativo;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JPanel;
+
+public class Fase extends JPanel{
+
+	private Image fundo;
+	private Image imagem;
+	private int pontos;
+	
+	
+	public Fase()
+	{
+		ImageIcon referencia = new ImageIcon("res//fundo.gif");
+		fundo = referencia.getImage();
+		
+		
+		
+	}
+	
+	public void paint(Graphics g) {
+		Graphics2D graficos = (Graphics2D) g;
+		graficos.drawImage(fundo, 0, 0, null);
+		graficos.setFont(new Font("kevin eleven medio", Font.PLAIN, 40));
+		graficos.setColor(Color.RED);
+		graficos.drawString("A ", 100, 300);
+	}
+	
+}

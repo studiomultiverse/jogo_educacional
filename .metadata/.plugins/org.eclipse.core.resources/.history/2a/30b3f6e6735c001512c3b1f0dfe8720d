@@ -1,0 +1,84 @@
+package jogoEducativo;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.util.Timer;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Fase extends JPanel implements ActionListener{
+
+	private Image fundo;
+	public Letra a;
+	private int pontos;
+	private Timer timer;
+	JLabel mousePosition;
+	
+	
+	public Fase()
+	{
+		setDoubleBuffered(true);
+		setFocusable(true);
+		addKeyListener(new TecladoAdapter());
+		ImageIcon referencia = new ImageIcon("res//fundo.gif");
+		fundo = referencia.getImage();
+		a = new Letra();
+		
+
+	}
+	
+	
+	
+	public void paint(Graphics g) {
+		Graphics2D graficos = (Graphics2D) g;
+		graficos.drawImage(fundo, 0, 0, null);
+		graficos.drawImage(a.getImagem(), a.getX(), a.getY(), null);
+		graficos.setFont(new Font("Sketch Match", Font.PLAIN, 30));
+		graficos.setColor(Color.YELLOW);
+		graficos.drawString("QUAL DAS LETRAS E A LETRA 'A'? ", 250, 100);
+		graficos.setFont(new Font("Sketch Match", Font.PLAIN, 100));
+		graficos.setColor(Color.RED);
+		graficos.drawString("A ", 300, 250);
+		graficos.setColor(Color.BLUE);
+		graficos.drawString("B ", 450, 250);
+		graficos.setColor(Color.GREEN);
+		graficos.drawString("C ", 620, 250);
+		
+		
+	}
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent arg0) {
+		a.testar();
+		repaint();
+		
+	}
+	
+	private class TecladoAdapter extends KeyAdapter {
+
+		@Override
+		public void keyPressed(KeyEvent e) {
+			// TODO Auto-generated method stub
+			a.keyPressed(e);
+		}
+		
+		public void keyReleased(KeyEvent e) {
+			// TODO Auto-generated method stub
+			a.keyReleased(e);
+		}
+		
+
+	}
+	
+}

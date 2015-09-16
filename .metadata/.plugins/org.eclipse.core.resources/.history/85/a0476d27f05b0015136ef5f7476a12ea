@@ -1,0 +1,49 @@
+package jogoEducativo;
+
+import java.awt.FlowLayout;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+
+public class Letra extends JButton {
+	
+	private int x,y;
+	private int largura,altura;
+	private Image fundo;
+	private boolean isVisivel;
+	
+	
+	public boolean isVisivel() {
+		return isVisivel;
+	}
+	public void setVisivel(boolean isVisivel) {
+		this.isVisivel = isVisivel;
+	}
+	public int getX() {
+		return x;
+	}
+	public int getY() {
+		return y;
+	}
+	public int getLargura() {
+		return largura;
+	}
+	public int getAltura() {
+		return altura;
+	}
+	public Image getFundo() {
+		return fundo;
+	}
+	
+	
+	public void Letra(){
+		ImageIcon letra = new ImageIcon("res//aa.gif");
+		setLayout(new FlowLayout(0,100,300));
+		add(new JButton(letra));
+		
+	}
+	
+	
+
+}

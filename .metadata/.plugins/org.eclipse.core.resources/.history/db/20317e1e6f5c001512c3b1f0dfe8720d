@@ -1,0 +1,116 @@
+package jogoEducativo;
+
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.awt.Image;
+import java.awt.Rectangle;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class Fase extends JPanel implements MouseMotionListener, MouseListener{
+
+	private Image fundo;
+	public Letra a;
+	private int pontos;
+	JLabel mousePosition;
+	
+	
+	public Fase()
+	{
+		ImageIcon referencia = new ImageIcon("res//fundo.gif");
+		fundo = referencia.getImage();
+		a = new Letra();
+		addMouseListener(this);
+		addMouseMotionListener(this);
+
+		
+		
+	}
+	
+	
+	
+	public void paint(Graphics g) {
+		Graphics2D graficos = (Graphics2D) g;
+		graficos.drawImage(fundo, 0, 0, null);
+		graficos.setFont(new Font("Sketch Match", Font.PLAIN, 50));
+		graficos.drawString("QUAL DAS LETRAS E A LETRA 'A'? ", 200, 100);
+		graficos.setFont(new Font("Sketch Match", Font.PLAIN, 100));
+		graficos.setColor(Color.RED);
+		graficos.drawString("A ", 300, 250);
+		graficos.setColor(Color.BLUE);
+		graficos.drawString("B ", 450, 250);
+		graficos.setColor(Color.GREEN);
+		graficos.drawString("C ", 620, 250);
+		
+		
+	}
+	
+	
+
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void mouseDragged(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+
+	@Override
+	public void mouseMoved(MouseEvent arg0) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+	
+
+	
+}

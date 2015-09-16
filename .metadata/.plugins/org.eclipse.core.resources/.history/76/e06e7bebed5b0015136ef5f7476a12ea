@@ -1,0 +1,27 @@
+package jogoEducativo;
+
+import java.awt.FlowLayout;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Janela extends JFrame {
+
+	public Janela() {
+		
+		add(new Letra());
+		add(new Fase());
+		this.setTitle("Game");
+		this.setSize(800, 620);
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
+		
+	}
+
+	public static void main(String[] args) {
+		new Janela();
+	}
+
+}
