@@ -1,2 +1,2 @@
-# teste jogo 
-bebe lindo eu amo voce 
+# Jogo escolar universitario 
+Projeto de jogo do curso de Jogos Digitais
